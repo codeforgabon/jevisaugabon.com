@@ -43,11 +43,11 @@ Session.vim
 .tmp
 
 /core/server/data/export/exported*
-/content/tmp/*
-/content/data/*
-/content/apps/**/*
+#/content/tmp/*
+#/content/data/*
+#/content/apps/**/*
 /content/themes/**/*
-/content/images/**/*
+#/content/images/**/*
 !/content/themes/casper/**
 !/README.md
 
