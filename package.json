@@ -20,7 +20,17 @@
   "scripts": {
     "preinstall": "npm install --production && grunt init",
     "start": "node server.js",
-    "test": "grunt validate --verbose"
+    "test": "grunt validate --verbose",
+    "server": "nodemon server",
+    "azure": "azure site log tail jevisaugabon",
+    "log": "rm -rf diagnostics.zip diagnostics && azure site log download jevisaugabon && open diagnostics.zip",
+    "build": "webpack",
+    "wpack": "webpack -w",
+    "dev": "npm run wpack && npm start",
+    "e2e": "protractor config",
+    "deploy-test": "surge -p public -d admission-philos.surge.sh",
+    "deploy": "surge -p public",
+    "booyaa": "npm run build && npm run deploy"
   },
   "engines": {
     "node": "~0.10.0 || ~0.12.0 || ~4.2.0",
